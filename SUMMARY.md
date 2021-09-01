@@ -20,9 +20,5 @@
 
 ## Reactjs
 
-* [Untitled](reactjs/untitled.md)
-
-## Nextjs
-
-* [Untitled](nextjs/untitled.md)
+* [Nextjs](reactjs/untitled.md)
 
