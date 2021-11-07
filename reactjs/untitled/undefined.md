@@ -87,6 +87,9 @@ yarn add --dev prettier eslint-config-prettier
 ```
 yarn add --dev husky
 
+// husky 사용
+yarn husky install
+
 // git hook 추가
 yarn husky add .husky/pre-commit "yarn tsc --noEmit && yarn eslint --fix . && yarn prettier --write ."
 
