@@ -20,7 +20,8 @@
 
 ## Reactjs
 
-* [Nextjs](reactjs/untitled.md)
+* [Nextjs](reactjs/untitled/README.md)
+  * [기본 설정](reactjs/untitled/undefined.md)
 
 ## Playgrounds
 
