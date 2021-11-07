@@ -10,7 +10,7 @@ yarn create next-app --typescript
 
 ### material-ui 설치
 
-React UI 라이브러
+React UI 라이브러리
 
 ```
 yarn add @mui/material @emotion/react @emotion/styled
