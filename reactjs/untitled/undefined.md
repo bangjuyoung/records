@@ -22,15 +22,57 @@ yarn add @mui/material @emotion/react @emotion/styled
 
 ### ESLint + Prettier 설치
 
+[https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js](https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js)
+
 #### ESLint
 
-* javascript 문법 검사
-* &#x20;[https://nextjs.org/docs/basic-features/eslint](https://nextjs.org/docs/basic-features/eslint)
+javascript 문법 검사
+
+```
+yarn add --dev @typescript-eslint/eslint-plugin
+
+// .eslintrc.json
+{
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    // I suggest you add those two rules:
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error"
+  }
+}
+```
 
 #### Prettier
 
-* 코딩 스타일 지정
-* [https://nextjs.org/docs/basic-features/eslint#prettier](https://nextjs.org/docs/basic-features/eslint#prettier)
+코딩 스타일 지정
+
+```
+yarn add --dev prettier eslint-config-prettier
+
+// .prettierrc.json
+{
+  "semi": true,
+  "trailingComma": "es5",
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false
+}
+
+// .eslintrc.json
+{
+  // ...
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "prettier" // Add "prettier" last. This will turn off eslint rules conflicting with prettier. This is not what will format our code.
+  ],
+  // ...
+}
+```
 
 ### Husky + Lint-staged 설치
 
