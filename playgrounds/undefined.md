@@ -15,7 +15,7 @@
 
 ### 오픈 API
 
-* [https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15092750](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15092750)
+[https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15092750](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15092750)
 
 ### 소스 관리
 
