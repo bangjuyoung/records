@@ -72,3 +72,35 @@ client
 
 > 쿼리를 연동하여 데이터가 변경되면 자동으로 UI를 업데이트 할 수 있다.
 
+`ApolloProvider`(리액트 `Context.Provider` 와 유사) 컴포넌트로 리액트 app를 감싸 `Apollo Client Context` 안에 둔다.
+
+&#x20;`GraphQL data` 가 필요한 컴포넌트 최 상위에 두어 어디서든 접근할 수 있게 한다.
+
+```jsx
+import React from 'react';
+import { render } from 'react-dom';
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  useQuery,
+  gql
+} from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  cache: new InMemoryCache()
+});
+
+function App() {
+  return (
+    <div>
+      <h2>My first Apollo app 🚀</h2>
+    </div>
+  );
+}
+
+render(
+  <ApolloProvider client={client}>    <App />  </ApolloProvider>,  document.getElementById('root'),
+);
+```
