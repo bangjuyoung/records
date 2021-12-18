@@ -25,6 +25,7 @@
 
 ***
 
+* [Apollo Client](apollo-client.md)
 * [CLI](cli/README.md)
   * [npx](cli/npx.md)
 
