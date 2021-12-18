@@ -104,3 +104,38 @@ render(
   <ApolloProvider client={client}>    <App />  </ApolloProvider>,  document.getElementById('root'),
 );
 ```
+
+**4. useQuery 를 사용하여 데이터 가져오기**
+
+> `useQuery`:  UI 와 GraphQL 데이터를 공유하는 리액트 훅
+
+```js
+// query 정
+const EXCHANGE_RATES = gql`
+  query GetExchangeRates {
+    rates(currency: "USD") {
+      currency
+      rate
+    }
+  }
+`;
+```
+
+```js
+// useQuery 로 데이터 가져오기
+// 컴포넌트가 렌더될 때마다 useQuery가 실행되고 데이터에 따라 UI가 자동으로 업데이트된다.
+// 응답 객체는 loading, error 상태와 쿼리 결과 값인 data 속성을 가진다.
+function ExchangeRates() {
+  const { loading, error, data } = useQuery(EXCHANGE_RATES);
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error :(</p>;
+
+  return data.rates.map(({ currency, rate }) => (
+    <div key={currency}>
+      <p>
+        {currency}: {rate}
+      </p>
+    </div>
+  ));
+}
+```
