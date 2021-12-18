@@ -39,7 +39,7 @@ import {
 
 **2-2. ApolloClient 초기화**
 
-> `uri`, `cache` **속성을 가진** 설정 객체를 전달한다.
+> `uri`, `cache` **** 속성을 가진 **** 설정 객체를 전달한다.
 
 ```js
 const client = new ApolloClient({
