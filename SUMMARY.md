@@ -25,8 +25,8 @@
 
 ***
 
-* [Commands](commands/README.md)
-  * [Node Package Manager](commands/node-package-manager.md)
+* [CLI](cli/README.md)
+  * [Node Package Manager](cli/node-package-manager.md)
 
 ## Playgrounds
 
