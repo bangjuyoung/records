@@ -67,3 +67,8 @@ client
   // 응답에 data 속성 외, loading 와 neworkStatus 속성 확인 가능
   .then(result => console.log(result));
 ```
+
+#### 3. 리액트 연동하기
+
+> 쿼리를 연동하여 데이터가 변경되면 자동으로 UI를 업데이트 할 수 있다.
+
