@@ -26,7 +26,7 @@
 ***
 
 * [CLI](cli/README.md)
-  * [Node Package Manager](cli/node-package-manager.md)
+  * [npx](cli/npx.md)
 
 ## Playgrounds
 
