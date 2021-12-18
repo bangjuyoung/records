@@ -50,3 +50,20 @@ const client = new ApolloClient({
 
 * `uri` GraphQL 서버 `URL`
 * `cache` `InMemoryCache 인스턴스, Apollo Client`가 `쿼리 페치 후 결과를 캐싱하기 위해` 사용
+
+**참고: 자바스크립트 사용 예시**
+
+```js
+client
+  .query({
+    query: gql`
+      query GetRates {
+        rates(currency: "USD") {
+          currency
+        }
+      }
+    `
+  })
+  // 응답에 data 속성 외, loading 와 neworkStatus 속성 확인 가능
+  .then(result => console.log(result));
+```
